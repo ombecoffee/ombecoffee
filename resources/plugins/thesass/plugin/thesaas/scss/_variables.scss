@@ -22,7 +22,7 @@ $gray-800:                        #343a40 !default;
 $gray-900:                        #212529 !default;
 $black:                           #000 !default; //#3b4752
 
-$blue:                            #50a1ff !default; //0facf3
+$blue:                            #144350 !default; //0facf3
 $indigo:                          #6610f2 !default;
 $purple:                          #926dde !default;
 $pink:                            #e83e8c !default;
@@ -32,10 +32,11 @@ $yellow:                          #ffba00 !default;
 $green:                           #3cd458 !default;
 $teal:                            #20c997 !default;
 $cyan:                            #17a2b8 !default;
+$grey:                              #707070 !default;
 
 // Context colors
 $color-primary:                   $blue !default;
-$color-secondary:                 #e9ecf0 !default; //e4e7ea
+$color-secondary:                 $grey !default; 
 $color-success:                   $green !default;
 $color-info:                      $purple !default;
 $color-warning:                   $yellow !default;

@@ -20,3 +20,12 @@ Route::get('/location', function () {
 Route::get('/careers', function () {
     return view('careers');
 });
+Route::get('/our', function () {
+    return view('our');
+});
+Route::get('/subs', function () {
+    return view('subs');
+});
+Route::get('/merch', function () {
+    return view('merch');
+});

@@ -11,11 +11,11 @@
         </div>
         <section class="navbar-mobile">
             <nav class="nav nav-navbar ml-auto">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link active" href="#">Our Story</a>
-                <a class="nav-link active" href="#">Store Location</a>
-                <a class="nav-link active" href="#">Merch</a>
-                <a class="nav-link active" href="#">Coffee Subcriptions</a>
+            <a class="nav-link active" href="{{ url('/')}}">Home</a>
+                <a class="nav-link active" href="{{ url('/our')}}">Our Story</a>
+                <a class="nav-link active" href="{{ url('/location')}}">Store Location</a>
+                <a class="nav-link active" href="{{ url('/merch')}}">Merch</a>
+                <a class="nav-link active" href="{{ url('/subs')}}">Coffee Subcriptions</a>
                 <a class="nav-link active" href="#">Careers</a>
               
             </nav>

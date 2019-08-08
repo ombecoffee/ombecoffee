@@ -18,100 +18,124 @@
         </h1>
     </div>
 </section>
-<section class="section bg-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                    <h3>Our Coffee</h3>
+<section class="our-story mh-600 bg-primary text-white">
+    <div class="container pt-10">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1>Our Story</h1>
+                <hr />
+                <p class="lead-3 text-justify">Our company was founded in 2013 with a mission to create pretty templates
+                    for great
+                    startups. We can combine beautiful, modern designs with clean, functional and high-performance code
+                    to produce stunning websites. And best of all, we are super passionate about our work. Thought does
+                    cognitive into follow and rationale annoyed.</p>
             </div>
-        </div>
-        <div class="row mt-2">
-            <div class="col-6 col-xl-3 rounded">
-                <div class="product-3 mb-3">
-                    <a class="product-media" href="item.html">
-                        <div class="bg-gray"
-                            style="background-image: url('https://tul.imgix.net/content/article/Perth_Best_Coffee_Boucla.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
-                        </div>
-
-                    </a>
-
-                    <div class="product-detail text-left">
-                        <h6><a href="#">PS4 DualShock Controller</a></h6>
-                        <div class="product-price">$52</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-xl-3 rounded">
-                <div class="product-3 mb-3">
-                    <a class="product-media" href="item.html">
-                        <div class="bg-gray"
-                            style="background-image: url('https://tul.imgix.net/content/article/Perth_Best_Coffee_Boucla.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
-                        </div>
-
-                    </a>
-
-                    <div class="product-detail text-left">
-                        <h6><a href="#">PS4 DualShock Controller</a></h6>
-                        <div class="product-price">$52</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-xl-3 rounded">
-                <div class="product-3 mb-3">
-                    <a class="product-media" href="item.html">
-                        <div class="bg-gray"
-                            style="background-image: url('https://tul.imgix.net/content/article/Perth_Best_Coffee_Boucla.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
-                        </div>
-
-                    </a>
-
-                    <div class="product-detail text-left">
-                        <h6><a href="#">PS4 DualShock Controller</a></h6>
-                        <div class="product-price">$52</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-xl-3 rounded">
-                <div class="product-3 mb-3">
-                    <a class="product-media" href="item.html">
-                        <div class="bg-gray"
-                            style="background-image: url('https://tul.imgix.net/content/article/Perth_Best_Coffee_Boucla.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
-                        </div>
-
-                    </a>
-
-                    <div class="product-detail text-left">
-                        <h6><a href="#">PS4 DualShock Controller</a></h6>
-                        <div class="product-price">$52</div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
         </div>
     </div>
 </section>
-
-<section class="section py-9"
-    style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/hero/BANNER-SelectEnjoy.jpg')">
-    <div class="overlay opacity-90" style="background-image: linear-gradient(90deg, #fff 0%, transparent 100%);"></div>
-    <div class="container">
-
+<section class="coffe-guides">
+    <div class="container-fluid pt-8">
+        <div class="col-lg-8 mx-auto text-center">
+            <h2>Coffee Guides</h2>
+            <p class="lead">Meet our small team that make those great products</p>
+            <hr />
+        </div>
         <div class="row">
-            <div class="col-10 col-md-7 col-xl-5">
-                <div class="section-dialog shadow-4">
-                    <h5 class="fw-500">Our Mission</h5>
-                    <blockquote class="blockquote text-left lead-1 mb-0 mt-5">
-                        <p>All it harmonics; Such based to pity of and rank people brief three their time and the this
-                            the should service employed.</p>
-                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                    </blockquote>
+            <div class="col-md-4">
+
+                <div class="card bg-img py-7 rounded py-10"
+                    style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
+                    data-overlay="3">
+                    <div class="card-body">
+                        <h3 class="text-white text-center mt-6">My coffee shop and my love</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="card bg-img py-7 rounded py-10"
+                    style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
+                    data-overlay="3">
+                    <div class="card-body">
+                        <h3 class="text-white text-center mt-6">My coffee shop and my love</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="card bg-img py-7 rounded py-10"
+                    style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
+                    data-overlay="3">
+                    <div class="card-body">
+                        <h3 class="text-white text-center mt-6">My coffee shop and my love</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xl-12 mt-5 text-center">
+                <button type="button" class="btn btn-lg btn-outline-primary mw-100">See All</button>
+        </div>
+    </div>
+</section>
+<section class="project pt-4 bg-primary section mt-8">
+    <div class="container-fluid  pt-8">
+        <div class="col-lg-8 mx-auto text-center text-white">
+            <h2>Project</h2>
+            <p class="lead">Meet our small team that make those great products</p>
+            <hr />
+        </div>
+        <div class="row">
+            <div class="col-lg-3 team-1 mt-2">
+                <div class="bg-white"
+                    style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/cms/experiences/Events-Full-Width.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
+                </div>
+                <div class="text-left">
+                    <div class="text-white">
+                        <h3>Morgan Guadis</h3>
+                    </div>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea rem earum autem architecto
+                        distinctio eius, ad eaque eligendi maxime voluptate obcaecati</small>
+                </div>
+            </div>
+            <div class="col-lg-3 team-1 mt-2">
+                <div class="bg-gray"
+                    style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/cms/experiences/Events-Full-Width.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
+                </div>
+                <div class="text-left">
+                    <div class="text-white">
+                        <h3>Morgan Guadis</h3>
+                    </div>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea rem earum autem architecto
+                        distinctio eius, ad eaque eligendi maxime voluptate obcaecati</small>
+                </div>
+            </div>
+            <div class="col-lg-3 team-1 mt-2">
+                <div class="bg-gray"
+                    style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/cms/experiences/Events-Full-Width.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
+                </div>
+                <div class="text-left">
+                    <div class="text-white">
+                        <h3>Morgan Guadis</h3>
+                    </div>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea rem earum autem architecto
+                        distinctio eius, ad eaque eligendi maxime voluptate obcaecati</small>
+                </div>
+            </div>
+            <div class="col-lg-3 team-1 mt-2">
+                <div class="bg-gray"
+                    style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/cms/experiences/Events-Full-Width.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
+                </div>
+                <div class="text-left">
+                    <div class="text-white">
+                        <h3>Morgan Guadis</h3>
+                    </div>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea rem earum autem architecto
+                        distinctio eius, ad eaque eligendi maxime voluptate obcaecati</small>
                 </div>
             </div>
         </div>
-
-    </div>
 </section>
 @endsection
