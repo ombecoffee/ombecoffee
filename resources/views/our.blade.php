@@ -10,8 +10,8 @@
 
 @section('content')
 
-<section class="py-10 text-white bg-white " data-overlay="3"
-    style="background-image: url('https://i1.wp.com/ombekofie.co.id/wp-content/uploads/2018/02/ombe-pluit-1.jpg?w=1200&ssl=1');background-repeat:no-repeat;background-size:cover;background-position:center ;">
+<section class="py-12 text-white bg-white " data-overlay="3"
+    style="background-image: url('https://i1.wp.com/ombekofie.co.id/wp-content/uploads/2018/02/ombe-pluit-1.jpg?w=1200&ssl=1');background-repeat:no-repeat;background-size:cover;background-position:center middle;">
 </section>
 <section class="section bg-gray">
     <div class="container">
@@ -80,8 +80,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-12 col-xl-6 text-right">
-            <button type="button" class="btn btn-lg btn-outline-danger mw-100">See All</button>
+        <div class="col-xl-12 mt-5 text-center">
+            <a href="{{ url('/detil_our')}}" class="btn btn-lg btn-outline-primary mw-100">View All</a>
         </div>
     </div>
 </section>

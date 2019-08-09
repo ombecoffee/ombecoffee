@@ -29,3 +29,16 @@ Route::get('/subs', function () {
 Route::get('/merch', function () {
     return view('merch');
 });
+Route::get('/guides', function () {
+    return view('guides');
+});
+Route::get('/detil_guides', function () {
+    return view('detil_guides');
+});
+Route::get('/detil_project', function () {
+    return view('detil_project');
+});
+Route::get('/detil_our', function () {
+    return view('detil_our');
+});
+

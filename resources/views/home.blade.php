@@ -42,41 +42,44 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-
-                <div class="card bg-img py-7 rounded py-10"
-                    style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
-                    data-overlay="3">
-                    <div class="card-body">
-                        <h3 class="text-white text-center mt-6">My coffee shop and my love</h3>
+                <a href="{{ url('/detil_guides')}}">
+                    <div class="card bg-img py-7 rounded py-9 mt-3"
+                        style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
+                        data-overlay="3">
+                        <div class="card-body">
+                            <h3 class="text-white text-center mt-6">My coffee shop and my love<br>
+                                Start Now ></h3>
+                        </div>
                     </div>
-                </div>
-
+                </a>
             </div>
             <div class="col-md-4">
-
-                <div class="card bg-img py-7 rounded py-10"
-                    style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
-                    data-overlay="3">
-                    <div class="card-body">
-                        <h3 class="text-white text-center mt-6">My coffee shop and my love</h3>
+                <a href="" class="hr">
+                    <div class="card bg-img py-7 rounded py-9 mt-3"
+                        style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
+                        data-overlay="3">
+                        <div class="card-body">
+                            <h3 class="text-white text-center mt-6">My coffee shop and my love<br>
+                                Start Now ></h3>
+                        </div>
                     </div>
-                </div>
-
+                </a>
             </div>
             <div class="col-md-4">
-
-                <div class="card bg-img py-7 rounded py-10"
-                    style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
-                    data-overlay="3">
-                    <div class="card-body">
-                        <h3 class="text-white text-center mt-6">My coffee shop and my love</h3>
+                <a href="" class="hr">
+                    <div class="card bg-img py-7 rounded py-9 mt-3"
+                        style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
+                        data-overlay="3">
+                        <div class="card-body">
+                            <h3 class="text-white text-center mt-6">My coffee shop and my love<br>
+                                Start Now ></h3>
+                        </div>
                     </div>
-                </div>
-
+                </a>
             </div>
         </div>
         <div class="col-xl-12 mt-5 text-center">
-                <button type="button" class="btn btn-lg btn-outline-primary mw-100">See All</button>
+            <a href="{{ url('/guides')}}" class="btn btn-lg btn-outline-primary mw-100">View All</a>
         </div>
     </div>
 </section>
@@ -89,12 +92,29 @@
         </div>
         <div class="row">
             <div class="col-lg-3 team-1 mt-2">
-                <div class="bg-white"
+                <a href="{{ url('/detil_project')}}">
+                    <div class="bg-white"
+                        style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/cms/experiences/Events-Full-Width.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
+                    </div>
+                    <div class="text-left">
+                        <div class="text-white">
+                            <h3>Morgan Guadis</h3>
+                        </div>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea rem earum autem
+                            architecto
+                            distinctio eius, ad eaque eligendi maxime voluptate obcaecati</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 team-1 mt-2">
+                <div class="bg-gray"
                     style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/cms/experiences/Events-Full-Width.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
                 </div>
                 <div class="text-left">
                     <div class="text-white">
-                        <h3>Morgan Guadis</h3>
+                        <a href="">
+                            <h3>Morgan Guadis</h3>
+                        </a>
                     </div>
                     <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea rem earum autem architecto
                         distinctio eius, ad eaque eligendi maxime voluptate obcaecati</small>
@@ -106,19 +126,9 @@
                 </div>
                 <div class="text-left">
                     <div class="text-white">
-                        <h3>Morgan Guadis</h3>
-                    </div>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea rem earum autem architecto
-                        distinctio eius, ad eaque eligendi maxime voluptate obcaecati</small>
-                </div>
-            </div>
-            <div class="col-lg-3 team-1 mt-2">
-                <div class="bg-gray"
-                    style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/cms/experiences/Events-Full-Width.jpg');background-repeat:no-repeat;background-size:contain;background-position:center ;min-height:318px">
-                </div>
-                <div class="text-left">
-                    <div class="text-white">
-                        <h3>Morgan Guadis</h3>
+                        <a href="">
+                            <h3>Morgan Guadis</h3>
+                        </a>
                     </div>
                     <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea rem earum autem architecto
                         distinctio eius, ad eaque eligendi maxime voluptate obcaecati</small>
@@ -137,5 +147,10 @@
                 </div>
             </div>
         </div>
+        <div class="col-xl-12 mt-5 text-center">
+            <button type="button" class="btn btn-lg btn-light mw-100">View All</button>
+        </div>
+    </div>
+    </div>
 </section>
 @endsection

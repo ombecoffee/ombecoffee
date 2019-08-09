@@ -16,7 +16,7 @@
                 <a class="nav-link active" href="{{ url('/location')}}">Store Location</a>
                 <a class="nav-link active" href="{{ url('/merch')}}">Merch</a>
                 <a class="nav-link active" href="{{ url('/subs')}}">Coffee Subcriptions</a>
-                <a class="nav-link active" href="#">Careers</a>
+                <a class="nav-link active" href="{{ url('/careers')}}">Careers</a>
               
             </nav>
         </section>
