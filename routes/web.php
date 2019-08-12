@@ -42,3 +42,7 @@ Route::get('/detil_our', function () {
     return view('detil_our');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
