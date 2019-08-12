@@ -17,9 +17,9 @@ Route::get('/', function () {
 Route::get('/location', function () {
     return view('location');
 });
-Route::get('/careers', function () {
-    return view('careers');
-});
+// Route::get('/careers', function () {
+//     return view('careers');
+// });
 Route::get('/our', function () {
     return view('our');
 });
