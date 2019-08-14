@@ -23,6 +23,8 @@ class CreateTadaTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('idtada');
+            $table->string('judul',100)->nullable();
+            $table->string('deskripsi')->nullable();
             $table->string('gambar', 45)->nullable();
         });
     }

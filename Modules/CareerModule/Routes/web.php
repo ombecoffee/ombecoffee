@@ -13,4 +13,7 @@
 
 Route::prefix('careers')->group(function() {
     Route::get('/', 'CareerModuleController@index');
+    Route::post('/entry-applicants', 'CareerModuleController@entry_applicants');
+    Route::post('/show-modal-applicants', 'CareerModuleController@modal_applicants');
+
 });

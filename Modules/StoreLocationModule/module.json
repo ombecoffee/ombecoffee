@@ -1,0 +1,14 @@
+{
+    "name": "StoreLocation",
+    "alias": "storelocation",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\StoreLocation\\Providers\\StoreLocationServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

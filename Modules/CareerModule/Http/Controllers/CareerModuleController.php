@@ -2,9 +2,12 @@
 
 namespace Modules\CareerModule\Http\Controllers;
 
+use App\Careers;
+use App\Location;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 
 class CareerModuleController extends Controller
 {
@@ -14,13 +17,34 @@ class CareerModuleController extends Controller
      */
     public function index()
     {
-        return view('careermodule::index');
+        $data['careers']=Careers::all();
+        $data['store']=Location::all();
+        return view('careermodule::index',$data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     * @return Response
-     */
+
+    public function modal_applicants(Request $request)
+    {
+        $id=$request->id;
+        $data['pelamar']=DB::table('pelamar')->get();
+        $data['careers']=DB::table('careers')->where('idcareers',$id)->first();
+        $data['store']=DB::table('store')->where('id_store',$id)->first();
+        return view('careermodule::ajax.modal_applicants', $data);
+    }
+
+    public function entry_applicants(Request $request)
+    {
+        DB::table('pelamar')->insert([
+                'nama' => $request->nama,
+                'email' => $request->email,
+            	'careers_idcareers' => $request->idcareers,
+            	'id_store' => $request->id_store
+            ]);
+
+        $data['data']=$request->all();
+        return $data;
+    }
+
     public function create()
     {
         return view('careermodule::create');

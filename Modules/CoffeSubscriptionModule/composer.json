@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/coffesubscription",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\CoffeSubscription\\Providers\\CoffeSubscriptionServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\CoffeSubscription\\": ""
+        }
+    }
+}

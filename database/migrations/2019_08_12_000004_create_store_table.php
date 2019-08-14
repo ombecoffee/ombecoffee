@@ -25,6 +25,7 @@ class CreateStoreTable extends Migration
             $table->increments('id_store');
             $table->string('nama_store', 45)->nullable();
             $table->string('alamat', 100)->nullable();
+            $table->text('gambar')->nullable();
             $table->unsignedInteger('users_id');
 
             $table->index(["users_id"], 'fk_store_user1_idx');

@@ -4,13 +4,13 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCoffeTable extends Migration
+class CreateCoffeeTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $tableName = 'coffe';
+    public $tableName = 'coffee';
 
     /**
      * Run the migrations.
@@ -27,10 +27,10 @@ class CreateCoffeTable extends Migration
             $table->string('pict', 45)->nullable();
             $table->unsignedInteger('users_id');
 
-            $table->index(["users_id"], 'fk_coffe_user1_idx');
+            $table->index(["users_id"], 'fk_coffee_user1_idx');
 
 
-            $table->foreign('users_id', 'fk_coffe_user1_idx')
+            $table->foreign('users_id', 'fk_coffee_user1_idx')
                 ->references('id')->on('users')
                 ->onDelete('no action')
                 ->onUpdate('no action');

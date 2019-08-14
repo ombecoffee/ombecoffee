@@ -4,46 +4,7 @@
 
 @endsection
 
-@section('content_footer')
- <!-- Subscribe 2 -->
- <div class="modal fade" id="modal-subscribe-2" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-  
-            <div class="modal-body p-md-0">
-              <div class="row no-gutters">
-                <div class="col-md-4 col-xl-6 d-none d-md-flex bg-img rounded-left" style="background-image: url(https://www.intelligentsiacoffee.com/media/wysiwyg/cms/locations/Logan_Square/Logan-Square-THUMBNAIL.jpg);background-repeat:no-repeat;background-size:cover;background-position:center middle;"></div>
-  
-                <div class="col-md-8 col-xl-5 mx-auto">
-                  <form class="py-7">
-                    <h3><strong>you apply  to become : <br/>Barista</strong></h3>
-                    <p>this position will be in Mall Plaza Senayan</p>
-                    <hr class="w-10 mt-2 mb-2">
-                    <div class="form-group">
-                      <input class="form-control" type="text" name="NAME" placeholder="Your Name">
-                    </div>
-  
-                    <div class="form-group">
-                      <input class="form-control" type="email" name="EMAIL" placeholder="Your Email">
-                    </div>
-  
-                    <button class="btn btn-lg btn-block btn-primary">Apply thhis position</button>
-                  </form>
-  
-                  <hr>
-  
-               
-                  </div>
-  
-                </div>
-              </div>
-            </div>
-  
-          </div>
-        </div>
-      </div>
-  
-@endsection
+
 
 @section('content')
 
@@ -52,119 +13,70 @@
 
 </section>
 <section class="section pt-5" id="section-open-positions">
-        <div class="container">
-          <header class="section-header">
-          
+    <div class="container">
+        <header class="section-header">
+
             <h2>Open Positions</h2>
             <hr>
             <p class="lead">Following list displays our current required positions. This list will update regularly.</p>
-          </header>
+        </header>
 
 
-          <div class="accordion accordion-connected shadow-5" id="accordion-job">
-
+        <div class="accordion accordion-connected shadow-5" id="accordion-job">
+            @foreach ($careers as $c =>$crs)
+            <input type="hidden" name="id" value="{{$crs->idcareers}}">
             <div class="card">
-              <h6 class="card-title">
-                <a class="d-flex align-items-center collapsed" data-toggle="collapse" href="#collapse-job-1">
-                  <strong class="mr-auto">Senior Analyst, Data Analytics</strong>
-                  <span class="small text-lighter">San Francisco <i class="fa fa-map-marker ml-2"></i></span>
-                </a>
-              </h6>
+                <h6 class="card-title">
+                    <a class="d-flex align-items-center collapsed" data-toggle="collapse" href="#collapse-job-1">
+                        <strong class="mr-auto">{{$crs->posisi}}</strong>
+                        @foreach ($store as $str)
+                        <span class="small text-lighter">{{$str->nama_store}} <i class="fa fa-map-marker ml-2"></i></span>
+                        @endforeach
+                    </a>
+                </h6>
 
-              <div id="collapse-job-1" class="collapse" data-parent="#accordion-job">
-                <div class="card-body">
-                  <p>Use your extensive knowledge of JavaScript, HTML, and CSS to improve our web client, a complex in-browser application relied upon by millions of users every day. You will work with real-time data streams, engineer for performance across browsers, and delight people by making the best software we can imagine. You will collaborate closely with Product, Design, Application Engineering, and QA to spec, build, test and deploy new features. This position reports directly to the Director of Front-end Engineering.</p>
+                <div id="collapse-job-1" class="collapse" data-parent="#accordion-job">
+                    <div class="card-body">
+                        <p>{!!$crs->deskripsi!!}</p>
+                        <hr class="w-100px">
+                        <p class="text-center"><button type="button" class="btn btn-lg btn-primary"
+                                onclick="show_modal_applicants({{$crs->store_id_store}})">Apply Now</button></p>
 
-                  <hr class="w-100px">
-
-                  <p class="text-center"><button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal-subscribe-2">Apply Now</button></p>
+                    </div>
                 </div>
-              </div>
             </div>
-
-
-            <div class="card">
-              <h6 class="card-title">
-                <a class="d-flex align-items-center collapsed" data-toggle="collapse" href="#collapse-job-2">
-                  <strong class="mr-auto">Senior Front-end Engineer</strong>
-                  <span class="small text-lighter">Remotely <i class="fa fa-map-marker ml-2"></i></span>
-                </a>
-              </h6>
-
-              <div id="collapse-job-2" class="collapse" data-parent="#accordion-job">
-                <div class="card-body">
-                  <p>Use your extensive knowledge of JavaScript, HTML, and CSS to improve our web client, a complex in-browser application relied upon by millions of users every day. You will work with real-time data streams, engineer for performance across browsers, and delight people by making the best software we can imagine. You will collaborate closely with Product, Design, Application Engineering, and QA to spec, build, test and deploy new features. This position reports directly to the Director of Front-end Engineering.</p>
-
-                  <hr class="w-100px">
-
-                  <p class="text-center"><button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal-subscribe-2">Apply Now</button></p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="card">
-              <h6 class="card-title">
-                <a class="d-flex align-items-center collapsed" data-toggle="collapse" href="#collapse-job-3" aria-expanded="false">
-                  <strong class="mr-auto">Lead Product Designer</strong>
-                  <span class="small text-lighter">New York City <i class="fa fa-map-marker ml-2"></i></span>
-                </a>
-              </h6>
-
-              <div id="collapse-job-3" class="collapse" data-parent="#accordion-job" style="">
-                <div class="card-body">
-                  <p>Use your extensive knowledge of JavaScript, HTML, and CSS to improve our web client, a complex in-browser application relied upon by millions of users every day. You will work with real-time data streams, engineer for performance across browsers, and delight people by making the best software we can imagine. You will collaborate closely with Product, Design, Application Engineering, and QA to spec, build, test and deploy new features. This position reports directly to the Director of Front-end Engineering.</p>
-
-                  <hr class="w-100px">
-
-                  <p class="text-center"><button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal-subscribe-2">Apply Now</button></p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="card">
-              <h6 class="card-title">
-                <a class="d-flex align-items-center collapsed" data-toggle="collapse" href="#collapse-job-4">
-                  <strong class="mr-auto">Online Advertising Manager</strong>
-                  <span class="small text-lighter">Toronto, Canada <i class="fa fa-map-marker ml-2"></i></span>
-                </a>
-              </h6>
-
-              <div id="collapse-job-4" class="collapse" data-parent="#accordion-job">
-                <div class="card-body">
-                  <p>Use your extensive knowledge of JavaScript, HTML, and CSS to improve our web client, a complex in-browser application relied upon by millions of users every day. You will work with real-time data streams, engineer for performance across browsers, and delight people by making the best software we can imagine. You will collaborate closely with Product, Design, Application Engineering, and QA to spec, build, test and deploy new features. This position reports directly to the Director of Front-end Engineering.</p>
-
-                  <hr class="w-100px">
-
-                  <p class="text-center"><button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal-subscribe-2">Apply Now</button></p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="card">
-              <h6 class="card-title">
-                <a class="d-flex align-items-center collapsed" data-toggle="collapse" href="#collapse-job-5">
-                  <strong class="mr-auto">Customer Support Manager</strong>
-                  <span class="small text-lighter">San Francisco <i class="fa fa-map-marker ml-2"></i></span>
-                </a>
-              </h6>
-
-              <div id="collapse-job-5" class="collapse" data-parent="#accordion-job">
-                <div class="card-body">
-                  <p>Use your extensive knowledge of JavaScript, HTML, and CSS to improve our web client, a complex in-browser application relied upon by millions of users every day. You will work with real-time data streams, engineer for performance across browsers, and delight people by making the best software we can imagine. You will collaborate closely with Product, Design, Application Engineering, and QA to spec, build, test and deploy new features. This position reports directly to the Director of Front-end Engineering.</p>
-
-                  <hr class="w-100px">
-
-                  <p class="text-center"><button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal-subscribe-2">Apply Now</button></p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-
+            @endforeach
         </div>
-      </section>
+    </div>
+</section>
+<div class="modal fade" id="modal_applicants" tabindex="-1" role="dialog" aria-labelledby="edit_jadwalLabel" aria-hidden="true">
+                       
+  </div>
+<script>
+  $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    function show_modal_applicants(id) {
+        $.ajax({
+            type: "post",
+            url: "/careers/show-modal-applicants",
+            data: {
+                id: id
+            },
+            // dataType:html,
+            beforeSend: function () {},
+            success: function (msg) {
+                $('#modal_applicants').html(msg);
+                $('#modal_applicants').modal('toggle');
+            },
+            error: function (xhr) {
+                $('#modal_loading').modal('toggle');
+                alert(xhr.responseJSON.message);
+            }
+        });
+    }
+
+</script>
 @endsection

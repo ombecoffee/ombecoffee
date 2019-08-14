@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-
+    <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+    
     <title>Default @yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->

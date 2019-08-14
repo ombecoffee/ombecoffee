@@ -61,7 +61,7 @@ class AdminModuleController extends Controller
     public function ourcoffee()
     {
         $crud = $this->_getGroceryCrudEnterprise();
-        $crud->setTable('coffe');
+        $crud->setTable('coffee');
         $crud->unsetJquery();
         $crud->unsetBootstrap();
         $crud->setSubject('Coffee', 'Coffes');
@@ -77,27 +77,210 @@ class AdminModuleController extends Controller
         $output = $crud->render();
         return $this->_show_output($output);    
     }
-
-    public function create()
+    public function project()
     {
-        return view('adminmodule::create');
+        $crud = $this->_getGroceryCrudEnterprise();
+        $crud->setTable('project');
+        $crud->unsetJquery();
+        $crud->unsetBootstrap();
+        $crud->setSubject('Project', 'Projects');
+        
+        // colom tabel coffe/tabel yg mau diambil/value colom
+        $crud->setRelation('users_id','users','name'); 
+        $crud->displayAs('users_id','name');
+        $crud->setFieldUpload('pict', 'uploader/coffee', ''.url('/').'/uploader/coffee');
+        $crud->callbackColumn('pict',function($value,$row){
+            return "<img src='".url('/')."/uploader/coffee/".$row->pict."' style='width:200px;' />";
+        });
+        $crud->setTexteditor(['deskripsi']);
+        $output = $crud->render();
+        return $this->_show_output($output);    
+    }
+    public function merchkategori()
+    {
+        $crud = $this->_getGroceryCrudEnterprise();
+        $crud->setTable('merch_kategori');
+        $crud->unsetJquery();
+        $crud->unsetBootstrap();
+        $crud->setSubject('Merch Kategori', 'Merchs');
+        
+        // colom tabel coffe/tabel yg mau diambil/value colom
+        $crud->setRelation('users_id','users','name'); 
+        $crud->displayAs('users_id','name');
+        // $crud->callbackColumn('merch_name',function($value,$row){
+        //     return "<a href='merch/detail/$row->idmerch'>$value</a>";
+        // });
+
+        $output = $crud->render();
+        return $this->_show_output($output);    
+    }
+    public function merch()
+    {
+        $crud = $this->_getGroceryCrudEnterprise();
+        $crud->setTable('merch');
+        $crud->unsetJquery();
+        $crud->unsetBootstrap();
+        $crud->setSubject('Merch', 'Merchs');
+        
+        // colom tabel coffe/tabel yg mau diambil/value colom
+        $crud->setRelation('idmerch_kategori','merch_kategori','merch_name'); 
+        $crud->displayAs('Kategori','merch_name');
+        $crud->setFieldUpload('pic', 'uploader/merch', ''.url('/').'/uploader/merch');
+        $crud->callbackColumn('pic',function($value,$row){
+            return "<img src='".url('/')."/uploader/merch/".$row->pic."' style='width:200px;' />";
+        });
+        $output = $crud->render();
+        return $this->_show_output($output);    
+    }
+   
+
+    public function subscription()
+    {
+        $crud = $this->_getGroceryCrudEnterprise();
+        $crud->setTable('tada');
+        $crud->unsetJquery();
+        $crud->unsetBootstrap();
+        $crud->setSubject('Subscription', 'tadas');
+        
+        // colom tabel coffe/tabel yg mau diambil/value colom
+        $crud->setRelation('users_id','users','name'); 
+        $crud->displayAs('users_id','name');
+        $crud->setFieldUpload('gambar', 'uploader/subscription', ''.url('/').'/uploader/subscription');
+        $crud->callbackColumn('gambar',function($value,$row){
+            return "<img src='".url('/')."/uploader/subscription/".$row->gambar."' style='width:200px;' />";
+        });
+        $crud->setTexteditor(['deskripsi']);
+        
+        $output = $crud->render();
+        return $this->_show_output($output);    
+    }
+    public function storelocation()
+    {
+        $crud = $this->_getGroceryCrudEnterprise();
+        $crud->setTable('store');
+        $crud->unsetJquery();
+        $crud->unsetBootstrap();
+        $crud->setSubject('Store', 'stores');
+        
+        // colom tabel coffe/tabel yg mau diambil/value colom
+        $crud->setRelation('users_id','users','name'); 
+        $crud->displayAs('users_id','name');
+        $crud->callbackColumn('nama_store',function($value,$row){
+            return "<a href='/admin/jadwal/$row->id_store'>$value</a>";
+        });
+        $crud->setFieldUpload('gambar', 'uploader/storelocation', ''.url('/').'/uploader/storelocation');
+        $crud->callbackColumn('gambar',function($value,$row){
+            return "<img src='".url('/')."/uploader/storelocation/".$row->gambar."' style='width:200px;' />";
+        });
+
+        $output = $crud->render();
+        return $this->_show_output($output);    
     }
 
-    /**
-     * Store a newly created resource in storage.
-     * @param Request $request
-     * @return Response
-     */
-    public function store(Request $request)
+    public function jadwal($id)
     {
-        //
+        $data['storeinfo']=DB::table('store')->where('id_store',$id)->first();
+        $data['jadwal']=DB::table('jadwal')->where('store_id_store',$id)->get();
+        $data['time']=DB::table('time')->get();
+        return view('adminmodule::jadwal', $data);
     }
 
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Response
-     */
+    public function store_jadwal(Request $request)
+    {
+        $hari=$request->hari;
+        $mulai=$request->mulai;
+        $akhir=$request->akhir;
+        $id_store=$request->id_store;
+
+        DB::table('jadwal')->insert([
+                'hari' => $request->hari,
+                'jam_buka' => $request->mulai,
+            	'jam_tutup' => $request->akhir,
+            	'store_id_store' => $request->id_store
+            ]);
+
+        $data['data']=$request->all();
+        // $data['jadwalinfo']=DB::table('jadwal')->where('id_jadwal',$id)->first();
+        return $data;
+    }
+
+    public function edit_jadwal(Request $request)
+    {
+        $data['jadwal']=DB::table('jadwal')
+                ->where('idjadwal',$request->idjadwal)
+                ->update(['hari' => $request->hari,
+                        'jam_buka' => $request->mulai,
+            	        'jam_tutup' => $request->akhir,
+                        'store_id_store' => $request->id_store
+                        ]);
+        $data['data']=$request->all();
+        return $data;
+    }
+
+    public function modal_edit_jadwal(Request $request)
+    {
+        $id=$request->id;
+
+        $data['time']=DB::table('time')->get();
+        $data['jadwal']=DB::table('jadwal')->where('idjadwal',$id)->first();
+        return view('adminmodule::ajax.modal_edit', $data);
+    }
+
+    public function delete_jadwal(Request $request)
+    {
+        $id=$request->id;
+
+        DB::table('jadwal')->where('idjadwal',$id)->delete();
+
+        $data['data']=$request->all();
+        return $data;
+    }
+
+    public function careers()
+    {
+        $crud = $this->_getGroceryCrudEnterprise();
+        $crud->setTable('careers');
+        $crud->unsetJquery();
+        $crud->unsetBootstrap();
+        $crud->setSubject('Career', 'Careers');
+
+        // colom tabel coffe/tabel yg mau diambil/value colom
+        $crud->setRelation('users_id','users','name'); 
+        $crud->displayAs('users_id','name');
+        $crud->setRelation('store_id_store','store','nama_store'); 
+        $crud->displayAs('Nama Store','nama_store');
+        $crud->setFieldUpload('gambar', 'uploader/careers', ''.url('/').'/uploader/careers');
+        $crud->callbackColumn('gambar',function($value,$row){
+            return "<img src='".url('/')."/uploader/careers/".$row->gambar."' style='width:200px;' />";
+        });
+        $crud->setTexteditor(['deskripsi']);
+        $output = $crud->render();
+        return $this->_show_output($output);  
+    }
+
+
+    public function applicants()
+    {
+        $crud = $this->_getGroceryCrudEnterprise();
+        $crud->setTable('pelamar');
+        $crud->unsetJquery();
+        $crud->unsetBootstrap();
+        $crud->setSubject('Applicant', 'Applicants');
+
+        // colom tabel coffe/tabel yg mau diambil/value colom
+        $crud->setRelation('careers_idcareers','careers','posisi'); 
+        $crud->displayAs('careers_idcareers','Posisi');
+        $crud->setRelation('id_store','store','nama_store'); 
+        $crud->displayAs('id_store','Nama Store');
+        $output = $crud->render();
+        return $this->_show_output($output);  
+    }
+    
+    public function early()
+    {
+        return view('adminmodule::editor');
+
+    }
     public function show($id)
     {
         return view('adminmodule::show');
@@ -110,7 +293,7 @@ class AdminModuleController extends Controller
      */
     public function edit($id)
     {
-        return view('adminmodule::edit');
+        return view('adminmodule::editor');
     }
 
     /**

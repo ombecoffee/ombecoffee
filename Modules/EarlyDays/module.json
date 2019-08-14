@@ -1,0 +1,14 @@
+{
+    "name": "EarlyDays",
+    "alias": "earlydays",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\EarlyDays\\Providers\\EarlyDaysServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

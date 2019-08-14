@@ -1,0 +1,14 @@
+{
+    "name": "OurStory",
+    "alias": "ourstory",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\OurStory\\Providers\\OurStoryServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

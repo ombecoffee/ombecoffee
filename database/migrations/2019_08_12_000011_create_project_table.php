@@ -25,6 +25,7 @@ class CreateProjectTable extends Migration
             $table->increments('idproject');
             $table->string('project_name', 45)->nullable();
             $table->text('deskripsi')->nullable();
+            $table->string('pict', 45)->nullable();
             $table->integer('users_id')->unsigned();
 
             $table->index(["users_id"], 'fk_project_users1_idx');

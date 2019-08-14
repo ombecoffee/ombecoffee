@@ -1,4 +1,4 @@
-@extends('layouts.nonavnofooter')
+@extends('adminmodule::layouts.nonavnofooter')
 
 @section('content')
 <main>
