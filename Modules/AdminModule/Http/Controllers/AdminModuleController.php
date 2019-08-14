@@ -276,11 +276,29 @@ class AdminModuleController extends Controller
         return $this->_show_output($output);  
     }
     
-    public function early()
+    public function early(Request $request)
     {
-        return view('adminmodule::editor');
-
+        $data['early']=DB::table('early')->first();
+        return view('adminmodule::editor',$data);
     }
+
+    public function get_early(Request $request)
+    {
+        $isi=$request->isi;
+
+        DB::table('early')->updateOrInsert(
+            [
+                'id'=>$request->id
+            ],[
+                'isi' => $request->editor_earlydays,
+            ]
+        );
+
+        $data['data']=$request->all();
+        return redirect('admin/early');
+    }
+    
+
     public function show($id)
     {
         return view('adminmodule::show');

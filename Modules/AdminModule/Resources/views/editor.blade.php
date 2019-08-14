@@ -17,7 +17,19 @@
                         <div class="card-body">
                             <h5 class="card-title">Early Days</h5>
                             <hr>
-                            <textarea name="editor_earlydays" id="" cols="100" rows="100"></textarea>
+                            <form action="/admin/early" method="post">
+                                {{-- {{dd($early)}} --}}
+                                @csrf
+                                @isset($early)
+                                    <input type="hidden" name="id" value="{{$early->Id}}">
+                                @endisset
+                                <textarea name="editor_earlydays" id="" cols="100" rows="100">
+                                    @isset($early)
+                                        {!!$early->isi!!}
+                                    @endisset
+                                </textarea>
+                                <button type="submit" class="btn btn-primary btn-sm mt-2" value="">Save</button>
+                            </form>
                         </div>
                     </div>
              </div>

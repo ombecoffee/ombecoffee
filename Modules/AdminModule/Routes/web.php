@@ -40,7 +40,7 @@ Route::prefix('admin')->group(function() {
     Route::get('/guides', 'AdminModuleController@guides');
     Route::post('/guides', 'AdminModuleController@guides');
     Route::get('/early', 'AdminModuleController@early');
-    Route::post('/early', 'AdminModuleController@early');
+    Route::post('/early', 'AdminModuleController@get_early');
 });
 
 

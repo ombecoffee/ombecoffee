@@ -66,5 +66,16 @@
 
     </div>
 </section>
+<section class="our-story mh-600 bg-primary text-white">
+        <div class="container pt-10">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>Early Days</h1>
+                    <hr />
+                    <p class="lead-3 text-justify"></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 @endsection
