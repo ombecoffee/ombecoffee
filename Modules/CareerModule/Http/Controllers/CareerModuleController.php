@@ -4,10 +4,13 @@ namespace Modules\CareerModule\Http\Controllers;
 
 use App\Careers;
 use App\Location;
+use App\Mail\MailApplicant;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+
 
 class CareerModuleController extends Controller
 {
@@ -34,15 +37,31 @@ class CareerModuleController extends Controller
 
     public function entry_applicants(Request $request)
     {
-        DB::table('pelamar')->insert([
+        $app_id = DB::table('pelamar')->insertGetId([
                 'nama' => $request->nama,
                 'email' => $request->email,
             	'careers_idcareers' => $request->idcareers,
             	'id_store' => $request->id_store
             ]);
+        $email_admin = DB::table('email_admin')->get('email');
 
+        $applicant = DB::table('pelamar')->join('careers', 'careers_idcareers', '=', 'idcareers')
+                                        ->join('store', 'pelamar.id_store', '=', 'store.id_store')
+                                        ->where('idpelamar', $app_id)->first();
+        Mail::to($email_admin)->send(new MailApplicant($applicant));
+        
         $data['data']=$request->all();
         return $data;
+    }
+
+    public function app_email()
+    {
+        $applicant = DB::table('pelamar')->join('careers', 'careers_idcareers', '=', 'idcareers')
+        ->join('store', 'pelamar.id_store', '=', 'store.id_store')
+        ->where('idpelamar', 8)->first();
+
+        // Mail::to('mufidahanisa@gmail.com')->send(new MailApplicant($applicant));
+        return new MailApplicant($applicant);
     }
 
     public function create()
