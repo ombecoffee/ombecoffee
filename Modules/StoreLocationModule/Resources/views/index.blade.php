@@ -23,13 +23,13 @@
         </div>
         <div class="row mt-5 ">
             @foreach ($store as $s=>$str)
-            <div class="col-lg-5 mb-5 mx-auto">
+            <div class="col-lg-5 my-6 mx-auto">
                 <div class="row">
                     <div class="col-lg-12"
                             style="background: url('{{asset('/uploader/storelocation/'.$str->gambar)}}') no-repeat center center;background-size:cover;min-height:318px">
                         </div>
                 </div>
-                <div class="row mt-2">
+                <div class="row mt-4">
                     <div class="col-lg-12">
                         <h4>{{$str->nama_store}}</h4>
                     </div>

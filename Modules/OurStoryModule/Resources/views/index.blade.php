@@ -20,7 +20,7 @@
                 <h3>Our Coffee</h3>
             </div>
         </div>
-        <div class="col-12 pt-3">
+        <div class="col-12 mt-7">
             <div class="row">
                 @foreach ($coffees as $c=>$cfe)
                 <div class="col-lg-3 mx-auto">
@@ -40,7 +40,7 @@
             </div>
         </div>
         @if ($coffeecount >=3)
-        <div class="col-xl-12 mt-5 text-center">
+        <div class="col-xl-12 mt-7 text-center">
                 <a href="{{ url('/allcoffee')}}" class="btn btn-lg btn-outline-primary mw-100">View All</a>
             </div>        
         @else
@@ -48,7 +48,7 @@
         @endif
     </div>
 </section>
-<section class="section py-9"
+<section class="section py-11"
     style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/hero/BANNER-SelectEnjoy.jpg')">
     <div class="overlay opacity-90" style="background-image: linear-gradient(90deg, #fff 0%, transparent 100%);"></div>
     <div class="container">
@@ -69,9 +69,9 @@
     </div>
 </section>
 <section class="our-story mh-500 bg-primary text-white">
-    <div class="container pt-6">
+    <div class="container py-8">
         <div class="row align-items-center h-100">
-            <div class="col-lg-8 mx-auto text-center">
+            <div class="col-lg-10 mx-auto text-center">
                 <h1>Early Days</h1>
                 @foreach ($early as $e=>$erl)
                 <hr />
@@ -84,12 +84,12 @@
     </div>
 </section>
 <section class="our-story mh-500 bg-gray">
-    <div class="container pt-6">
+    <div class="container py-8">
         <div class="row align-items-center h-100">
             <div class="col-lg-8 mx-auto text-center">
                 <h3>#PeopleOfOmbe</h3>
             </div>
-            <div class="col-12 pt-3">
+            <div class="col-12 mt-7">
                 <div class="row">
                     @foreach ($people as $p=>$plp)
                     <div class="col-lg-3 mx-auto">

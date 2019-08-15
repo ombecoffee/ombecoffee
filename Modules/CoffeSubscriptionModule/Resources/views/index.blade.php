@@ -15,7 +15,7 @@
 
     </section>
 
-    <section class="section pt-4">
+    <section class="section my-1">
         <div class="container">
             <div class="row">
                 @foreach ($subs as $s=>$cfsb)

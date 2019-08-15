@@ -18,8 +18,10 @@ class MerchController extends Controller
         $data['category']=Merch::get_merch_kategori();
         if(isset($category)){
             $data['merchs']=Merch::where('idmerch_kategori', $category)->get();
+            $data['id_cat']=$category;
         } else {
             $data['merchs']=Merch::all();
+            $data['id_cat']=null;
         }
         return view('merch::index', $data);  
     }

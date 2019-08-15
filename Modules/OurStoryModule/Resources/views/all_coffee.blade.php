@@ -23,7 +23,7 @@
         <div class="col-12 pt-3">
             <div class="row">
                 @foreach ($coffees as $c=>$cfe)
-                <div class="col-lg-3 mx-auto">
+                <div class="col-lg-3 mt-7 mx-auto">
                     <div class="product-3 mb-3">
                         <a class="product-media" href="#">
                             <div class="bg-gray"

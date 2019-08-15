@@ -18,7 +18,7 @@
         </h1>
     </div>
 </section>
-<section class="our-story mh-600 bg-primary text-white">
+<section class="our-story mh-700 bg-primary text-white">
     <div class="container pt-10">
         <div class="row align-items-center h-100">
             <div class="col-lg-8 mx-auto text-center">
@@ -58,7 +58,7 @@
             @endforeach
         </div>
         @if ($guidescount >=3 )
-        <div class="col-xl-12 mt-5 text-center">
+        <div class="col-xl-12 mt-8 text-center">
             <a href="{{ url('/allguides')}}" class="btn btn-lg btn-outline-primary mw-100">View All</a>
         </div>
         @else
@@ -90,7 +90,7 @@
             </div>
             @endforeach
             @if ($projectscount >=3)
-            <div class="col-xl-12 mt-5 text-center">
+            <div class="col-xl-12 mt-8 text-center">
                 <a href="{{ url('/allproject')}}" class="btn btn-lg btn-light mw-100">View All</a>
             </div>
             @else

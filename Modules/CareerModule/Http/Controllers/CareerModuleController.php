@@ -17,8 +17,8 @@ class CareerModuleController extends Controller
      */
     public function index()
     {
-        $data['careers']=Careers::all();
-        $data['store']=Location::all();
+        $data['careers']=Careers::join('store', 'id_store', '=', 'store_id_store')->get();
+        // $data['store']=Location::all();
         return view('careermodule::index',$data);
     }
 

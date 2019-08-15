@@ -3,7 +3,7 @@
         <div class="row gap-y align-items-center">
 
             <div class="col-md-6 text-center text-md-left">
-                <small>© angin team | copyright 2019.</small>
+                <small>© Ombe Kofie  | copyright 2019.</small>
             </div>
 
             <div class="col-md-6 text-center text-md-right">
