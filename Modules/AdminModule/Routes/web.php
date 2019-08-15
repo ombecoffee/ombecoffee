@@ -41,6 +41,12 @@ Route::prefix('admin')->group(function() {
     Route::post('/guides', 'AdminModuleController@guides');
     Route::get('/early', 'AdminModuleController@early');
     Route::post('/early', 'AdminModuleController@get_early');
+    Route::get('/now', 'AdminModuleController@now');
+    Route::post('/now', 'AdminModuleController@get_now');
+    Route::get('/people', 'AdminModuleController@people');
+    Route::post('/people', 'AdminModuleController@people');
+    Route::get('/guides', 'AdminModuleController@guides');
+    Route::post('/guides', 'AdminModuleController@guides');
 });
 
 

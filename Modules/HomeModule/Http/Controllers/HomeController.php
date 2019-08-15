@@ -6,6 +6,9 @@ use App\Project;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
+
+
 
 class HomeController extends Controller
 {
@@ -15,8 +18,31 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data['projects']=Project::all();
+        $data['projects']=Project::limit(3)->get();
+        $data['projectscount'] = DB::table('project')->count();
+        $data['guidescount'] = DB::table('guides')->count();
+        $data['guides']=Project::get_guides()->limit(3)->get();
         return view('home::index', $data);
+    }
+
+    public function guides($id){
+        $data['guides']=Project::get_guides()->where('Id',$id)->first();
+        return view('home::detil_guides',$data);
+    }
+
+    public function allguides(){
+        $data['guides']=Project::get_guides()->get();
+        return view('home::all_guides',$data);
+    }
+
+    public function project($id){
+        $data['project']=Project::where('idproject',$id)->first();
+        return view('home::detil_project',$data);
+    }
+
+    public function allproject(){
+        $data['project']=Project::get(); 
+        return view('home::all_project',$data);
     }
 
     /**

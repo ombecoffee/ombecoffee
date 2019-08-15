@@ -12,3 +12,11 @@
 */
 
     Route::get('/', 'HomeController@index');
+    Route::get('/detil_guides', 'HomeController@guides');
+    Route::get('/detil_guides/{id}', 'HomeController@guides');
+    Route::get('/allguides', 'HomeController@allguides');
+    Route::get('/detil_project', 'HomeController@project');
+    Route::get('/allproject', 'HomeController@allproject');
+    Route::get('/detil_project/{id}', 'HomeController@project');
+
+ 

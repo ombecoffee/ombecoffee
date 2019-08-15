@@ -41,46 +41,28 @@
             <hr />
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <a href="{{ url('/detil_guides')}}">
+            @foreach ($guides as $g=>$gds)
+            <input type="hidden" value="{{$gds->Id}}">
+            <div class="col-md-4 mx-auto">
+                <a href="{{ url('/detil_guides/'.$gds->Id)}}">
                     <div class="card bg-img py-7 rounded py-9 mt-3"
-                        style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
-                        data-overlay="3">
+                    style="background: url('{{asset('/uploader/guides/'.$gds->pict)}}') no-repeat center center;background-size:cover;min-height:300px"
+                    data-overlay="3">
                         <div class="card-body">
-                            <h3 class="text-white text-center mt-6">My coffee shop and my love<br>
+                            <h3 class="text-white text-center mt-6">{{$gds->title}}<br>
                                 Start Now ></h3>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
-                <a href="" class="hr">
-                    <div class="card bg-img py-7 rounded py-9 mt-3"
-                        style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
-                        data-overlay="3">
-                        <div class="card-body">
-                            <h3 class="text-white text-center mt-6">My coffee shop and my love<br>
-                                Start Now ></h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="" class="hr">
-                    <div class="card bg-img py-7 rounded py-9 mt-3"
-                        style="background-image: url('https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/v1475191851/v3eiwz6ay2et3qvyrba5.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;"
-                        data-overlay="3">
-                        <div class="card-body">
-                            <h3 class="text-white text-center mt-6">My coffee shop and my love<br>
-                                Start Now ></h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            @endforeach
         </div>
+        @if ($guidescount >=3 )
         <div class="col-xl-12 mt-5 text-center">
-            <a href="{{ url('/guides')}}" class="btn btn-lg btn-outline-primary mw-100">View All</a>
+            <a href="{{ url('/allguides')}}" class="btn btn-lg btn-outline-primary mw-100">View All</a>
         </div>
+        @else
+        @endif
     </div>
 </section>
 <section class="project pt-4 bg-primary section mt-8">
@@ -92,8 +74,9 @@
         </div>
         <div class="row">
             @foreach ($projects as $i=>$prj)
+            <input type="hidden" value="{{$prj->idproject}}">
             <div class="col-lg-4 team-1 mt-2 mx-auto">
-                <a href="{{ url('/detil_project')}}">
+                <a href="{{ url('/detil_project/'.$prj->idproject)}}">
                     <div class="bg-white"
                         style="background: url('{{asset('/uploader/coffee/'.$prj->pict)}}') no-repeat center center;background-size:cover;min-height:318px">
                     </div>
@@ -106,11 +89,14 @@
                 </a>
             </div>
             @endforeach
+            @if ($projectscount >=3)
+            <div class="col-xl-12 mt-5 text-center">
+                <a href="{{ url('/allproject')}}" class="btn btn-lg btn-light mw-100">View All</a>
+            </div>
+            @else
 
-        <div class="col-xl-12 mt-5 text-center">
-            <button type="button" class="btn btn-lg btn-light mw-100">View All</button>
+            @endif
         </div>
-    </div>
     </div>
 </section>
 @endsection

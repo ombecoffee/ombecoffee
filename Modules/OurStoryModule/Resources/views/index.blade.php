@@ -25,7 +25,7 @@
                 @foreach ($coffees as $c=>$cfe)
                 <div class="col-lg-3 mx-auto">
                     <div class="product-3 mb-3">
-                        <a class="product-media" href="item.html">
+                        <a class="product-media" href="#">
                             <div class="bg-gray"
                                 style="background: url('{{asset('/uploader/coffee/'.$cfe->pict)}}') no-repeat center center;background-size:cover;min-height:318px">
                             </div>
@@ -39,12 +39,14 @@
                 @endforeach
             </div>
         </div>
+        @if ($coffeecount >=3)
         <div class="col-xl-12 mt-5 text-center">
-            <a href="{{ url('/detil_our')}}" class="btn btn-lg btn-outline-primary mw-100">View All</a>
-        </div>
+                <a href="{{ url('/allcoffee')}}" class="btn btn-lg btn-outline-primary mw-100">View All</a>
+            </div>        
+        @else
+            
+        @endif
     </div>
-
-
 </section>
 <section class="section py-9"
     style="background-image: url('https://www.intelligentsiacoffee.com/media/wysiwyg/hero/BANNER-SelectEnjoy.jpg')">
@@ -66,16 +68,47 @@
 
     </div>
 </section>
-<section class="our-story mh-600 bg-primary text-white">
-        <div class="container pt-10">
-            <div class="row align-items-center h-100">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h1>Early Days</h1>
-                    <hr />
-                    <p class="lead-3 text-justify"></p>
+<section class="our-story mh-500 bg-primary text-white">
+    <div class="container pt-6">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1>Early Days</h1>
+                @foreach ($early as $e=>$erl)
+                <hr />
+                <div class="text-justify">
+                    <p>{!!$erl->isi!!}</p>
                 </div>
             </div>
         </div>
-    </section>
-
+        @endforeach
+    </div>
+</section>
+<section class="our-story mh-500 bg-gray">
+    <div class="container pt-6">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-8 mx-auto text-center">
+                <h3>#PeopleOfOmbe</h3>
+            </div>
+            <div class="col-12 pt-3">
+                <div class="row">
+                    @foreach ($people as $p=>$plp)
+                    <div class="col-lg-3 mx-auto">
+                        <div class="product-3 mb-3">
+                            <a class="product-media" href="#">
+                                <div class="bg-gray"
+                                    style="background: url('{{asset('/uploader/people/'.$plp->pict)}}') no-repeat center center;background-size:cover;min-height:318px">
+                                </div>
+                            </a>
+                            <div class="product-detail text-left">
+                                <h6>{{$plp->people_name}}</h6>
+                                <div class="product-price">{!!$plp->deskripsi!!}</div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

@@ -51,10 +51,10 @@
                         <li class="treeview"><a href="/admin/early"><i class=""></i>
                                 <span>Early Days</span></a>
                         </li>
-                        <li class="treeview"><a href=""><i class=""></i>
+                        <li class="treeview"><a href="/admin/now"><i class=""></i>
                                 <span>Now</span></a>
                         </li>
-                        <li class="treeview"><a href=""><i class=""></i>
+                        <li class="treeview"><a href="/admin/people"><i class=""></i>
                                 <span>#PeopleOfOmbe</span></a>
                         </li>
                     </ul>

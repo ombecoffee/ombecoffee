@@ -297,8 +297,65 @@ class AdminModuleController extends Controller
         $data['data']=$request->all();
         return redirect('admin/early');
     }
-    
+    public function now(Request $request)
+    {
+        $data['now']=DB::table('now')->first();
+        return view('adminmodule::editor_now',$data);
+    }
 
+    public function get_now(Request $request)
+    {
+        $isi=$request->isi;
+
+        DB::table('now')->updateOrInsert(
+            [
+                'id'=>$request->id
+            ],[
+                'isi' => $request->editor_now,
+            ]
+        );
+
+        $data['data']=$request->all();
+        return redirect('admin/now');
+    }
+    public function people()
+    {
+        $crud = $this->_getGroceryCrudEnterprise();
+        $crud->setTable('people');
+        $crud->unsetJquery();
+        $crud->unsetBootstrap();
+        $crud->setSubject('People of Ombe', 'Peoples');
+        
+        // colom tabel coffe/tabel yg mau diambil/value colom
+        $crud->setRelation('users_id','users','name'); 
+        $crud->displayAs('users_id','name');
+        $crud->setFieldUpload('pict', 'uploader/people', ''.url('/').'/uploader/people');
+        $crud->callbackColumn('pict',function($value,$row){
+            return "<img src='".url('/')."/uploader/people/".$row->pict."' style='width:200px;' />";
+        });
+        $crud->setTexteditor(['deskripsi']);
+        $output = $crud->render();
+        return $this->_show_output($output);    
+    }
+    public function guides()
+    {
+        $crud = $this->_getGroceryCrudEnterprise();
+        $crud->setTable('guides');
+        $crud->unsetJquery();
+        $crud->unsetBootstrap();
+        $crud->setSubject('Coffe Guides', 'Guides');
+        $crud->setFieldUpload('pict', 'uploader/guides', ''.url('/').'/uploader/guides');
+        $crud->callbackColumn('pict',function($value,$row){
+            return "<img src='".url('/')."/uploader/guides/".$row->pict."' style='width:200px;' />";
+        });
+        
+        // colom tabel coffe/tabel yg mau diambil/value colom
+        $crud->setRelation('users_id','users','name'); 
+        $crud->displayAs('users_id','name');
+        $crud->setTexteditor(['step']);
+        $output = $crud->render();
+        return $this->_show_output($output);    
+    }
     public function show($id)
     {
         return view('adminmodule::show');

@@ -11,17 +11,6 @@
 |
 */
 
-
-// Route::get('/careers', function () {
-//     return view('careers');
-// });
-
-Route::get('/guides', function () {
-    return view('guides');
-});
-Route::get('/detil_guides', function () {
-    return view('detil_guides');
-});
 Route::get('/detil_project', function () {
     return view('detil_project');
 });

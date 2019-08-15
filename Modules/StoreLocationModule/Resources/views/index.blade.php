@@ -14,7 +14,7 @@
     style="background-image: url('https://bluebottlecoffee.com/assets/our_coffee/bg-img-pouring-1388916512f1d5ee59ed7f28d191201dbc10a757739465a18f6c250e2fd91f24.jpg');background-repeat:no-repeat;background-size:cover;background-position:center ;">
 
 </section>
-<section class="section pt-6">
+<section class="section pt-8">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">

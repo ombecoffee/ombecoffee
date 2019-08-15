@@ -13,4 +13,5 @@
 
 
     Route::get('/our', 'OurStoryController@index');
+    Route::get('/allcoffee', 'OurStoryController@allcoffee');
 

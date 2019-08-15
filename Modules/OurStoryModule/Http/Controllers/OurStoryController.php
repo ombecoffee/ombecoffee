@@ -7,6 +7,7 @@ use App\Coffee;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 
 class OurStoryController extends Controller
 {
@@ -16,10 +17,16 @@ class OurStoryController extends Controller
      */
     public function index()
     {
-        $data['coffees']=Coffee::all();
+        $data['coffees']=Coffee::limit(3)->get();
+        $data['coffeecount'] = DB::table('coffee')->count();
+        $data['early']=Coffee::get_early();
+        $data['people']=Coffee::get_people();
         return view('ourstory::index',$data);
     }
-
+    public function allcoffee(){
+        $data['coffees']=Coffee::get();
+        return view('ourstory::all_coffee',$data);
+    }
     /**
      * Show the form for creating a new resource.
      * @return Response
