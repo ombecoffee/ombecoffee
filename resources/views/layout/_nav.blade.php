@@ -5,8 +5,8 @@
         <div class="navbar-left">
             <button class="navbar-toggler" type="button">&#9776;</button>
             <a class="navbar-brand" href="#">
-                <img class="logo-dark" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/The_Boring_Company_Logo.svg/1200px-The_Boring_Company_Logo.svg.png" alt="logo">
-                <img class="logo-light" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/The_Boring_Company_Logo.svg/1200px-The_Boring_Company_Logo.svg.png" alt="logo">
+            <img class="logo-dark" src="{{asset('/images/omb-logo.png')}}" alt="logo" >
+                <img class="logo-light" src="{{asset('/images/omb-logo.png')}}" alt="logo" style="height:90px;max-height: 90px;">
             </a>
         </div>
         <section class="navbar-mobile">
