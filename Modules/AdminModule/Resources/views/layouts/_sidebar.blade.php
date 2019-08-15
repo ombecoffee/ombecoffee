@@ -1,13 +1,13 @@
 <div id="app">
     <aside class="main-sidebar fixed offcanvas shadow" data-toggle='offcanvas'>
         <section class="sidebar">
-            <div class="w-80px mt-3 mb-3 ml-3">
-                {{-- <img src="assets/img/basic/logo.png" alt=""> --}}
+            <div class=" mt-3 mb-3 text-center">
+                <img src="{{asset('/images/omb-logo.png')}}" height="75px" alt="">
             </div>
             <div class="relative">
                 <a data-toggle="collapse" href="#userSettingsCollapse" role="button" aria-expanded="false"
                     aria-controls="userSettingsCollapse"
-                    class="btn-fab btn-fab-sm absolute fab-right-bottom fab-top btn-primary shadow1 ">
+                    class="btn-fab btn-fab-sm absolute fab-right-bottom fab-top btn-secondary shadow1 ">
                     <i class="fas fa-cog"></i>
                 </a>
                 <div class="user-panel p-3 light mb-2">

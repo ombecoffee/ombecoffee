@@ -11,13 +11,18 @@
 |
 */
 
-Route::get('/detil_project', function () {
-    return view('detil_project');
-});
-Route::get('/detil_our', function () {
-    return view('detil_our');
-});
+// Route::get('/detil_project', function () {
+//     return view('detil_project');
+// });
+// Route::get('/detil_our', function () {
+//     return view('detil_our');
+// });
 
 Auth::routes();
+
+Route::get('/login', function () {
+    return view('adminmodule::auth.login');
+})->name('login');
+
 
 Route::get('/home', 'HomeController@index')->name('home');

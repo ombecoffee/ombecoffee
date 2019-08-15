@@ -46,8 +46,7 @@
             <div class="col-md-4 mx-auto">
                 <a href="{{ url('/detil_guides/'.$gds->Id)}}">
                     <div class="card bg-img py-7 rounded py-9 mt-3"
-                    style="background: url('{{asset('/uploader/guides/'.$gds->pict)}}') no-repeat center center;background-size:cover;min-height:300px"
-                    data-overlay="3">
+                    style="background: url('{{asset('/uploader/guides/'.$gds->pict)}}') no-repeat center center;background-size:cover;min-height:300px" data-overlay="6">
                         <div class="card-body">
                             <h3 class="text-white text-center mt-6">{{$gds->title}}<br>
                                 Start Now ></h3>

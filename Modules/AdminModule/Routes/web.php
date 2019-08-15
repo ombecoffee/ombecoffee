@@ -10,8 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::prefix('admin')->group(function() {
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
+// Route::prefix('admin')->group(function() {
     Route::get('/', 'AdminModuleController@index');
     Route::post('/', 'AdminModuleController@index');
     Route::get('/ourcoffee', 'AdminModuleController@ourcoffee');

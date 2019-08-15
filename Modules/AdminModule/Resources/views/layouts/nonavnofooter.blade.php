@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Login</title>
     <!-- Styles -->
-    <link href="{{ asset('app.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/admin_app.css') }}" rel="stylesheet" type="text/css">
 
        {{-- Laravel Mix - CSS File --}}
        {{-- <link rel="stylesheet" href="{{ mix('css/authmodules.css') }}"> --}}
@@ -86,6 +86,6 @@
         {{-- Laravel Mix - JS File --}}
         {{-- <script src="{{ mix('js/authmodules.js') }}"></script> --}}
     </body>
-    <script src="{{ asset('app.js') }}"></script>
+    <script src="{{ asset('js/admin_app.js') }}"></script>
 
 </html>
