@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2019-08-15 16:29:01
+# Date: 2019-08-16 15:11:47
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -39,6 +39,22 @@ CREATE TABLE `early` (
 #
 
 INSERT INTO `early` VALUES (1,'<p>Misteri pembunuh bertopeng terhadap keluarga di Kampung Gegeneng, RT 01 RW 01, Desa Sukadalam, Kecamatan Waringkurung, Serang, Banten, perlahan mulai menemukan titik terang. Polisi telah mengidentifikasi pelaku.</p>\r\n\r\n<p>EDITED</p>\r\n\r\n<p>&quot;Kalau identitas pelaku secara pasti belum. Namun, penyelidikan kita hari ini sudah mengerucut, ada beberapa nama yang sudah kita kantongi,&quot; kata Kasat Reskrim Polres Serang Kota AKP Ivan Adhitira, Rabu (14/8).</p>\r\n\r\n<p>Ivan optimistis dalam waktu dekat institusinya segera mengungkap dan menangkap pembunuh Rustandi (32) dan anaknya yang masih berusia 4 tahun itu. &quot;Kami harapkan secepat-cepatnya bisa terungkap,&quot; ujar dia.</p>\r\n\r\n<p>Dalam peristiwa itu, istri Rustandi, hanya Siti Saadiyah yang selamat. Siti mengalami luka tusuk di sekujur tubuhnya. Dia kini dirawat di RSUD Cilegon.</p>\r\n\r\n<p>Ivan sebelumnya menuturkan berdasarkan keterangan Siti, pelaku ada dua orang. Dua pelaku itu mengenakan topeng dan mengetok pintu rumah Rustandi pada Selasa (13/8) dini hari sekitar pukul 02.00 WIB.</p>\r\n\r\n<p>Kapolres Serang, AKBP Firman Affandi, meyakini pembunuh telah merencanakan aksinya sejak lama. &quot;Pelaku yang mengetuk pintu depan sudah menggunakan penutup muka, sehingga sudah dipastikan pembunuhan ini berencana,&quot; ujar Firman.</p>');
+
+#
+# Structure for table "email_admin"
+#
+
+CREATE TABLE `email_admin` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+#
+# Data for table "email_admin"
+#
+
+INSERT INTO `email_admin` VALUES (1,'mufidahanisa@gmail.com');
 
 #
 # Structure for table "migrations"
@@ -205,13 +221,13 @@ CREATE TABLE `pelamar` (
   KEY `fk_pelamar_careers1_idx` (`careers_idcareers`),
   CONSTRAINT `fk_pelamar_careers1_idx` FOREIGN KEY (`careers_idcareers`) REFERENCES `careers` (`idcareers`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_table1_store1_idx` FOREIGN KEY (`id_store`) REFERENCES `store` (`id_store`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 #
 # Data for table "pelamar"
 #
 
-INSERT INTO `pelamar` VALUES (5,1,'apel',1,'mufidahanisa@gmail.com');
+INSERT INTO `pelamar` VALUES (5,1,'apel',1,'mufidahanisa@gmail.com'),(8,1,'anisa',1,'mufidahanisa@gmail.com'),(9,1,'apel',1,'1512503192@student.budiluhur.ac.id'),(10,1,'ikan bakar',1,'muf@gmail.com'),(11,1,'anisa',1,'aldis289@gmail.com'),(12,1,'mata',1,'aldis289@gmail.com'),(13,1,'anisa',1,'1512503192@student.budiluhur.ac.id'),(14,1,'anisa',1,'1512503192@student.budiluhur.ac.id'),(15,1,'anisa',1,'1512503192@student.budiluhur.ac.id'),(16,1,'anisa',1,'1512503192@student.budiluhur.ac.id'),(17,1,'anisa',1,'1512503192@student.budiluhur.ac.id'),(18,1,'putra tekno asia',1,'denin.resky@gmail.com');
 
 #
 # Structure for table "jadwal"
@@ -274,7 +290,7 @@ CREATE TABLE `people` (
 # Data for table "people"
 #
 
-INSERT INTO `people` VALUES (1,'anisa','a.png','<p>haiiiiiiiiiiiiiii</p>\r\n',1);
+INSERT INTO `people` VALUES (1,'anisa','2.jpg','<p>haiiiiiiiiiiiiiii</p>\r\n',1);
 
 #
 # Structure for table "merch_kategori"
