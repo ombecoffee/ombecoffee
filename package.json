@@ -31,7 +31,7 @@
         "jquery.photoswipe": "^1.1.1",
         "laravel-mix": "^4.0.7",
         "lity": "^2.3.1",
-        "lodash": "^4.17.5",
+        "lodash": "^4.17.21",
         "node-sass-tilde-importer": "^1.0.2",
         "objectFitPolyfill": "^2.2.0",
         "popper.js": "^1.15.0",
