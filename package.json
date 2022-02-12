@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.8.2",
-        "ajv": "^6.10.0",
+        "ajv": "^6.12.3",
         "ajv-keywords": "^3.4.0",
         "aos": "^2.3.4",
         "axios": "^0.18",
